@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">WhiteBoard</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="introduction_1">Welcome\nTo\nWhiteBoard!</string>
+    <string name="introduction_2">ホワイトボードはグループ内での情報共有に特化したアプリです</string>
+    <string name="introduction_3">まずはグループを作成してメンバーを追加してみましょう！！</string>
+</resources>
