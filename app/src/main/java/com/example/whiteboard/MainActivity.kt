@@ -13,11 +13,9 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         val introPageIntent = Intent(this, IntroductionPageActivity::class.java)
-        println("main was called.")
 
         if (!isIntroEnded) {
             isIntroEnded = true
-            println("isIntroEnded = $isIntroEnded")
 
             startActivity(introPageIntent)
         }
@@ -27,7 +25,6 @@ class MainActivity : AppCompatActivity() {
         val button = findViewById<Button>(R.id.MainPageButton)
 
         button.setOnClickListener {
-            println("mainPageButton was Clicked")
             startActivity(introPageIntent)
         }
     }

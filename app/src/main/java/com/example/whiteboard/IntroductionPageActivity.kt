@@ -35,8 +35,7 @@ class IntroductionPageActivity : FragmentActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_introduction_page)
 
-        println("intro was called.")
-
+        //intro_buttonにイントロ画面を終了するコールバックを設定
         val introEndButton = findViewById<Button>(R.id.intro_button)
         introEndButton.setOnClickListener {
             val mainActivityIntent =
