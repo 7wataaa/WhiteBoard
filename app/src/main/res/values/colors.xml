@@ -9,4 +9,7 @@
     <color name="white">#FFFFFFFF</color>
     <color name="activeIndicatorColor">#ABB4BB</color>
     <color name="indicatorColor">#dce0e3</color>
+    <color name="sub_blue">#A0CDEF</color>
+    <color name="main_green">#CCE3BA</color>
+    <color name="pen_black">#515151</color>
 </resources>

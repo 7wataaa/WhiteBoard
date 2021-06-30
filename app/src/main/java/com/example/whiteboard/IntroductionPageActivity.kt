@@ -9,7 +9,7 @@ import android.widget.LinearLayout
 import androidx.core.content.ContextCompat
 import androidx.core.content.res.ResourcesCompat
 import androidx.fragment.app.Fragment
-import  androidx.fragment.app.FragmentActivity
+import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import androidx.viewpager2.widget.ViewPager2
 
@@ -33,7 +33,6 @@ class IntroductionPageActivity : FragmentActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_introduction_page)
 
-        //viewPager
         viewPager = findViewById(R.id.pager)
 
         //viewPagerのAdapterにIntroductionPageAdapterを設定

@@ -11,10 +11,11 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        val intent = Intent(this, IntroductionPageActivity::class.java)
+        val introPageIntent = Intent(this, IntroductionPageActivity::class.java)
 
         if (!isIntroEnded) {
-            startActivity(intent)
+            println("introページにとんだよ!")
+            startActivity(introPageIntent)
         }
 
         setContentView(R.layout.activity_main)
@@ -22,7 +23,7 @@ class MainActivity : AppCompatActivity() {
         val button = findViewById<Button>(R.id.MainPageButton)
 
         button.setOnClickListener {
-            startActivity(intent)
+            startActivity(introPageIntent)
         }
     }
 }
