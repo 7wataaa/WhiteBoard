@@ -3,8 +3,10 @@ package com.example.whiteboard
 import IntroductionPage1Fragment
 import IntroductionPage2Fragment
 import IntroductionPage3Fragment
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import android.widget.Button
 import android.widget.LinearLayout
 import androidx.core.content.ContextCompat
 import androidx.core.content.res.ResourcesCompat
@@ -32,6 +34,16 @@ class IntroductionPageActivity : FragmentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_introduction_page)
+
+        println("intro was called.")
+
+        val introEndButton = findViewById<Button>(R.id.intro_button)
+        introEndButton.setOnClickListener {
+            val mainActivityIntent =
+                Intent(this@IntroductionPageActivity, MainActivity::class.java)
+            startActivity(mainActivityIntent)
+            finish()
+        }
 
         viewPager = findViewById(R.id.pager)
 
@@ -63,6 +75,11 @@ class IntroductionPageActivity : FragmentActivity() {
                             null
                         )
                 }
+
+                //最終ページだったらボタンを表示させる (注: positionは0ベース
+                introEndButton.visibility =
+                    if (position == NUM_PAGES - 1) View.VISIBLE else View.INVISIBLE
+
             }
         })
 
